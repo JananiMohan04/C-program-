@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char s1[20], s2[20];
+    printf("String 1: ");
+    fgets(s1, sizeof(s1), stdin);
+    printf("String 2: ");
+    fgets(s2, sizeof(s2), stdin);
+    s1[strcspn(s1, "\n")] = 0; // remove newline
+    s2[strcspn(s2, "\n")] = 0;
+    int cmp = strcmp(s1, s2);
+    if(cmp == 0) printf("Same\n");
+    else if(cmp < 0) printf("String 1 comes first\n");
+    else printf("String 2 comes first\n");
+    return 0;
+}
