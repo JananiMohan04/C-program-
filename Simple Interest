@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    float p, r, t;
+    printf("Principal, Rate, Time: ");
+    scanf("%f %f %f", &p, &r, &t);
+    float si = (p * r * t) / 100;
+    printf("Simple Interest: ₹%.2f\nTotal: ₹%.2f", si, p+si);
+    return 0;
+}
