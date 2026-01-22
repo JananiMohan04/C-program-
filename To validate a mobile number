@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char num[15];
+    printf("Enter mobile number: ");
+    scanf("%s", num);
+    if(strlen(num) != 10 || num[0] < '6' || num[0] > '9') {
+        printf("Invalid\n");
+        return 0;
+    }
+    for(int i = 1; i < 10; i++)
+        if(num[i] < '0' || num[i] > '9') {
+            printf("Invalid\n");
+            return 0;
+        }
+    printf("Valid\n");
+    return 0;
+}
