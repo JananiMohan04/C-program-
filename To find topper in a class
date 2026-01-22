@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int n, i, topper = 0;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+    float marks, max = 0;
+    for(i = 1; i <= n; i++) {
+        printf("Enter marks for student %d: ", i);
+        scanf("%f", &marks);
+        if(marks > max) {
+            max = marks;
+            topper = i;
+        }
+    }
+    printf("Topper is student %d with %.2f marks\n", topper, max);
+    return 0;
+}
