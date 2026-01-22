@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    int n, i, j;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+    float marks[n], temp;
+    for(i = 0; i < n; i++) {
+        printf("Enter marks for student %d: ", i+1);
+        scanf("%f", &marks[i]);
+    }
+    for(i = 0; i < n-1; i++)
+        for(j = 0; j < n-i-1; j++)
+            if(marks[j] > marks[j+1]) {
+                temp = marks[j];
+                marks[j] = marks[j+1];
+                marks[j+1] = temp;
+            }
+    printf("\nSorted marks:\n");
+    for(i = 0; i < n; i++)
+        printf("%.2f ", marks[i]);
+    printf("\n");
+    return 0;
+}
