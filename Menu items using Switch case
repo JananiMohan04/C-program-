@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int choice;
+    printf("Menu:\n1. Pizza ₹200\n2. Burger ₹100\n3. Sandwich ₹80\n4. Exit\n");
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+    switch(choice) {
+        case 1: printf("Pizza ordered. Pay ₹200\n"); break;
+        case 2: printf("Burger ordered. Pay ₹100\n"); break;
+        case 3: printf("Sandwich ordered. Pay ₹80\n"); break;
+        case 4: printf("Exiting...\n"); break;
+        default: printf("Invalid choice\n");
+    }
+    return 0;
+}
