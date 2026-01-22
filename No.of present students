@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int n, i, count = 0;
+    char status;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+    for(i = 1; i <= n; i++) {
+        printf("Student %d (P/A): ", i);
+        scanf(" %c", &status);
+        if(status == 'P' || status == 'p') count++;
+    }
+    printf("Present students: %d\n", count);
+    return 0;
+}
