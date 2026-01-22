@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    float income, expense, savings;
+    printf("Enter monthly income: ₹");
+    scanf("%f", &income);
+    printf("Enter monthly expenses: ₹");
+    scanf("%f", &expense);
+    savings = income - expense;
+    printf("Savings: ₹%.2f (%.2f%% of income)\n", savings, (savings/income)*100);
+    return 0;
+}
