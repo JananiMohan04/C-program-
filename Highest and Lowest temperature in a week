@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    float temp, high, low;
+    printf("Enter temperature for Day 1: ");
+    scanf("%f", &temp);
+    high = low = temp;
+    for(int i = 2; i <= 7; i++) {
+        printf("Enter temperature for Day %d: ", i);
+        scanf("%f", &temp);
+        if(temp > high) high = temp;
+        if(temp < low) low = temp;
+    }
+    printf("Highest: %.1f°C\nLowest: %.1f°C\n", high, low);
+    return 0;
+}
