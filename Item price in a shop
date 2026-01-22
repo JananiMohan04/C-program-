@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    char item[20];
+    float price;
+    printf("Item & Price: ");
+    scanf("%s%f", item, &price);
+    printf("Search item: ");
+    scanf("%s", item);
+    printf("Price: ₹%.2f\n", price);
+    return 0;
+}
