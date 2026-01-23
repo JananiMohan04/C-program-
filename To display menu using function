@@ -1,0 +1,17 @@
+#include <stdio.h>
+void displayMenu() {
+    printf("1. Pizza 🍕\n");
+    printf("2. Burger 🍔\n");
+    printf("3. Exit\n");
+}
+int main() {
+    int choice;
+    while(1) {
+        displayMenu();
+        printf("Choice: ");
+        scanf("%d", &choice);
+        if(choice == 3) break;
+        // handle choice
+    }
+    return 0;
+}
