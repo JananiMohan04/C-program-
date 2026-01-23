@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int validate(char *user, char *pass) {
+    char u[] = "admin", p[] = "1234";
+    return strcmp(user, u)==0 && strcmp(pass, p)==0;
+}
+int main() {
+    char user[20], pass[20];
+    printf("Username: ");
+    scanf("%s", user);
+    printf("Password: ");
+    scanf("%s", pass);
+    printf("%s\n", validate(user, pass) ? "Login Success" : "Failed");
+    return 0;
+}
