@@ -1,0 +1,20 @@
+#include <stdio.h>
+float areaCircle(float r) { return 3.14 * r * r; }
+float areaRect(float l, float b) { return l * b; }
+int main() {
+    int choice;
+    printf("1. Circle, 2. Rectangle: ");
+    scanf("%d", &choice);
+    if(choice == 1) {
+        float r;
+        printf("Radius: ");
+        scanf("%f", &r);
+        printf("Area: %.2f\n", areaCircle(r));
+    } else {
+        float l, b;
+        printf("Length, Breadth: ");
+        scanf("%f %f", &l, &b);
+        printf("Area: %.2f\n", areaRect(l, b));
+    }
+    return 0;
+}
