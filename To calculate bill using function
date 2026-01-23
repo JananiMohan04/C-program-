@@ -1,0 +1,15 @@
+#include <stdio.h>
+float calculateBill(float units) {
+    float bill = 0;
+    if(units <= 100) bill = units * 1.5;
+    else if(units <= 200) bill = 100 * 1.5 + (units-100) * 2;
+    else bill = 100 * 1.5 + 100 * 2 + (units-200) * 3;
+    return bill;
+}
+int main() {
+    float units;
+    printf("Enter units: ");
+    scanf("%f", &units);
+    printf("Bill: ₹%.2f\n", calculateBill(units));
+    return 0;
+}
