@@ -1,0 +1,30 @@
+#include <stdio.h>
+struct Customer {
+    int id;
+    char name[50];
+    char mobile[15];
+};
+void display(struct Customer c) {
+    printf("ID: %d, Name: %s, Mobile: %s\n", c.id, c.name, c.mobile);
+}
+int main() {
+    int n;
+    printf("Enter number of customers: ");
+    scanf("%d", &n);
+    struct Customer cust[n];
+    for(int i=0; i<n; i++) {
+        printf("Enter id, name, mobile for customer %d: ", i+1);
+        scanf("%d %s %s", &cust[i].id, cust[i].name, cust[i].mobile);
+    }
+    int searchId;
+    printf("Enter ID to search: ");
+    scanf("%d", &searchId);
+    for(int i=0; i<n; i++) {
+        if(cust[i].id == searchId) {
+            display(cust[i]);
+            return 0;
+        }
+    }
+    printf("Not found\n");
+    return 0;
+}
