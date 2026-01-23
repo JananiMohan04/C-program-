@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    int n, new;
+    printf("Enter initial array size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements: ", n);
+    for(int i=0; i<n; i++) scanf("%d", &arr[i]);
+    
+    printf("Enter number of new elements: ");
+    scanf("%d", &new);
+    int arr2[n+new];
+    for(int i=0; i<n; i++) arr2[i] = arr[i];
+    printf("Enter %d new elements: ", new);
+    for(int i=n; i<n+new; i++) scanf("%d", &arr2[i]);
+    
+    printf("Updated list: ");
+    for(int i=0; i<n+new; i++) printf("%d ", arr2[i]);
+    printf("\n");
+    return 0;
+}
