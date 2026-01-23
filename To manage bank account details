@@ -1,0 +1,16 @@
+#include <stdio.h>
+struct Account {
+    int accNo;
+    char name[50];
+    float balance;
+};
+void display(struct Account a) {
+    printf("Acc No: %d, Name: %s, Balance: ₹%.2f\n", a.accNo, a.name, a.balance);
+}
+int main() {
+    struct Account acc;
+    printf("Enter acc no, name, balance: ");
+    scanf("%d %s %f", &acc.accNo, acc.name, &acc.balance);
+    display(acc);
+    return 0;
+}
