@@ -1,0 +1,14 @@
+#include <stdio.h>
+float cToF(float c) { return (c * 9/5) + 32; }
+float fToC(float f) { return (f - 32) * 5/9; }
+int main() {
+    float temp;
+    char unit;
+    printf("Enter temperature (e.g., 25C, 77F): ");
+    scanf("%f%c", &temp, &unit);
+    if(unit == 'C' || unit == 'c') 
+        printf("%.2fF\n", cToF(temp));
+    else if(unit == 'F' || unit == 'f') 
+        printf("%.2fC\n", fToC(temp));
+    return 0;
+}
