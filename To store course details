@@ -1,0 +1,16 @@
+#include <stdio.h>
+struct Course {
+    int code;
+    char name[50];
+    int credits;
+};
+void display(struct Course c) {
+    printf("Code: %d, Name: %s, Credits: %d\n", c.code, c.name, c.credits);
+}
+int main() {
+    struct Course cr;
+    printf("Enter code, name, credits: ");
+    scanf("%d %s %d", &cr.code, cr.name, &cr.credits);
+    display(cr);
+    return 0;
+}
