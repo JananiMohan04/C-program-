@@ -1,0 +1,16 @@
+#include <stdio.h>
+struct Ticket {
+    int ticketNo;
+    char passenger[50];
+    char route[30];
+};
+void display(struct Ticket t) {
+    printf("Ticket No: %d, Passenger: %s, Route: %s\n", t.ticketNo, t.passenger, t.route);
+}
+int main() {
+    struct Ticket tk;
+    printf("Enter ticket no, passenger name, route: ");
+    scanf("%d %s %s", &tk.ticketNo, tk.passenger, tk.route);
+    display(tk);
+    return 0;
+}
