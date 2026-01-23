@@ -1,0 +1,17 @@
+#include <stdio.h>
+struct Student {
+    int roll;
+    float maths;
+    float science;
+    float english;
+};
+float total(struct Student s) {
+    return s.maths + s.science + s.english;
+}
+int main() {
+    struct Student stud;
+    printf("Enter roll, maths, science, english marks: ");
+    scanf("%d %f %f %f", &stud.roll, &stud.maths, &stud.science, &stud.english);
+    printf("Total: %.2f\n", total(stud));
+    return 0;
+}
