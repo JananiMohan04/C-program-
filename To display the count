@@ -1,0 +1,17 @@
+#include <stdio.h>
+struct Employee {
+    int id;
+    char name[30];
+};
+int main() {
+    int n;
+    printf("Enter number of employees: ");
+    scanf("%d", &n);
+    struct Employee emp[n];
+    for(int i=0; i<n; i++) {
+        printf("Enter id, name for employee %d: ", i+1);
+        scanf("%d %s", &emp[i].id, emp[i].name);
+    }
+    printf("Total records: %d\n", n);
+    return 0;
+}
